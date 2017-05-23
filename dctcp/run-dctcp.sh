@@ -1,7 +1,7 @@
 #!/bin/bash
 
 bws="100 1000"
-bws="100"
+bws="30 60 120 180"
 t=20
 n=3
 maxq=425
@@ -36,5 +36,5 @@ function dctcp {
 for bw in $bws; do
     tcp $bw
     #ecn $bw
-    #dctcp $bw
+    dctcp $bw
 done
